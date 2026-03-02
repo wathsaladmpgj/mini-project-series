@@ -55,3 +55,18 @@ wrapper.py
 ```text
 jobs/backup.py
 ```
+
+## step 8 - Add Cron Jobs
+
+```text
+crontab -e
+```
+```text
+# Health check every 5 minutes
+*/5 * * * * /home/ubuntu/cron-framework/venv/bin/python /home/ubuntu/cron-framework/wrapper.py /home/ubuntu/cron-framework/jobs/health_check.py
+
+# Backup daily at 2 AM (needs root if backing up /etc)
+0 2 * * * /home/ubuntu/cron-framework/venv/bin/python /home/ubuntu/cron-framework/wrapper.py /home/ubuntu/cron-framework/jobs/backup.py
+```
+
+!(cronejob.png)
