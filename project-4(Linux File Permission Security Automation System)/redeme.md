@@ -1,6 +1,6 @@
 # Linux File Permission Security Automation System
 
-Automated Linux patch management system built with Bash. The script checks system repositories for available package updates, installs patches only when necessary, and logs the entire process. Designed for scheduled execution using cron, it helps maintain server security and stability by ensuring systems remain updated without requiring manual administrative intervention.
+This project is a Linux File Permission Security Automation System designed to detect and fix insecure file permissions automatically. It scans directories for world-writable files, applies secure permissions, and logs all actions for auditing. The system uses Bash scripting, cron jobs for automation, and structured logging for monitoring. It helps prevent unauthorized access, privilege escalation, and misconfigurations in Linux environments.
 
 - Project Structure
 ```text
@@ -52,11 +52,4 @@ crontab -e
 Compleet !
 
 
-![Cron Framework Architecture](cjob.png)
-
-
-- Check if Cron Runs
-```text
-cat ~/patch-management/logs/patch.log
-```
-![Cron Framework Architecture](patch.png)
+![Cron Framework Architecture](filepermission.png)
